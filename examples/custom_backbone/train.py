@@ -7,7 +7,7 @@ from keras_model_wrapper import Trainer
 from config import load_config
 
 # Import your custom backbone
-from matterport_resnet import ResNet50, ResNet101, preprocess_input
+from matterport_resnet import ResNet50, ResNet101, preprocess_input, VGG16
 
 # You can add or override existing backbone model
 # and corresponding preprocessing function as follows:
@@ -15,6 +15,7 @@ from classification_models import Classifiers
 Classifiers._models.update({
     'resnet50': [ResNet50, preprocess_input],
     'resnet101': [ResNet101, preprocess_input],
+    'vgg16': [VGG16, preprocess_input]
 })
 
 ############################################################
