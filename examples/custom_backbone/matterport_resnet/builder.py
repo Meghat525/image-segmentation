@@ -141,18 +141,11 @@ def build_resnet(block_count=5,
 
     return model
 
-def build_vgg16(include_top=True, weights='imagenet',
+def build_vgg16(include_top=True,
           input_tensor=None, input_shape=None,
           pooling=None,
           classes=1000):
-    if weights not in {'imagenet', None}:
-        raise ValueError('The `weights` argument should be either '
-                         '`None` (random initialization) or `imagenet` '
-                         '(pre-training on ImageNet).')
-
-    if weights == 'imagenet' and include_top and classes != 1000:
-        raise ValueError('If using `weights` as imagenet with `include_top`'
-                         ' as true, `classes` should be 1000')
+    
     # Determine proper input shape
     input_shape = _obtain_input_shape(input_shape,
                                       default_size=224,
