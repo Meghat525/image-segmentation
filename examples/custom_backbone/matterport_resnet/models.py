@@ -24,6 +24,15 @@ weights_collection = [
         'name': 'resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5',
         'md5': 'a268eb855778b3df3c7506639542a6af',
     }
+  {
+        'model': 'vgg16',
+        'dataset': 'imagenet',
+        'classes': 1000,
+        'include_top': False,
+        'url': 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5',
+        'name': 'vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
+    }
+
 ]
 
 def ResNet50(input_shape, input_tensor=None, weights=None,
@@ -56,3 +65,15 @@ def ResNet101(input_shape, input_tensor=None, weights=None,
 
     return model
 
+def VGG16(input_shape, include_top=True, weights=None,
+          input_tensor=None,
+          classes=1000):
+    model = build_vgg16(include_top=include_top,
+          input_tensor=input_tensor, input_shape=input_shape,
+          pooling=None,
+          classes=classes)
+    model.name = 'vgg16'
+
+    if weights:
+        load_model_weights(weights_collection, model, weights, classes, include_top)
+    return model
