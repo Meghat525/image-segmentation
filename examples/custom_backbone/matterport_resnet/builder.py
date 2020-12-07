@@ -141,7 +141,7 @@ def build_resnet(block_count=5,
 
     return model
 
-def VGG16(include_top=True, weights='imagenet',
+def build_vgg16(include_top=True, weights='imagenet',
           input_tensor=None, input_shape=None,
           pooling=None,
           classes=1000):
