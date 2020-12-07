@@ -1,4 +1,4 @@
-from .builder import build_resnet
+from .builder import build_resnet, build_vgg16
 from classification_models.utils import load_model_weights
 
 
