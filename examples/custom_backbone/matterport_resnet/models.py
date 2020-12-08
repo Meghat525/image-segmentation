@@ -12,7 +12,7 @@ weights_collection = [
         'include_top': True,
         'url': 'https://github.com/fchollet/deep-learning-models/releases/download/v0.2/resnet50_weights_tf_dim_ordering_tf_kernels.h5',
         'name': 'resnet50_weights_tf_dim_ordering_tf_kernels.h5',
-        'md5': 'a7b3fe01876f51b976af0dea6bc144eb',
+        'md5': 'a7b3fe01876f51b976af0dea6bc144eb'
     },
 
     {
@@ -22,9 +22,9 @@ weights_collection = [
         'include_top': False,
         'url': 'https://github.com/fchollet/deep-learning-models/releases/download/v0.2/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5',
         'name': 'resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5',
-        'md5': 'a268eb855778b3df3c7506639542a6af',
-    }
-  {
+        'md5': 'a268eb855778b3df3c7506639542a6af'
+    },
+    {
         'model': 'vgg16',
         'dataset': 'imagenet',
         'classes': 1000,
